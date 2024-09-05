@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link rel="stylesheet" href="../Assets/css/style.css" />
+    <title>Home - Novice Lync</title>
+  </head>
+  <body class="flex flex-col min-h-screen bg-white">
+    <!-- Navbar -->
+    <nav class="bg-[#fbf2ff] shadow-md py-4">
+      <div class="container mx-auto flex items-center justify-between px-4">
+        <div class="flex items-center">
+          <img
+            src="../Assets/img/logo/favicon.png"
+            alt="Logo"
+            class="h-8 mr-3"
+          />
+          <span class="text-xl font-bold text-black">Novice Lync</span>
+        </div>
+        <div class="space-x-4">
+          <a
+            href="./Pages/login.html"
+            class="text-black font-semibold hover:text-purple-600"
+            >Login</a
+          >
+          <a
+            href="./Pages/signup.html"
+            class="bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-500"
+            >Sign Up</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-white py-16">
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl font-bold text-gray-900 mb-6">
+          Welcome to Novice Lync
+        </h1>
+        <p class="text-lg text-gray-600 mb-8">
+          Connect, collaborate, and innovate with fellow students to bring your
+          academic and project ideas to life.
+        </p>
+
+        <a
+          href="services.html"
+          class="bg-purple-600 text-white px-6 py-3 rounded-md hover:bg-purple-500"
+          >Explore Our Platform</a
+        >
+      </div>
+    </section>
+
+    <!-- Project Overview Section -->
+    <section class="bg-[#fefaff] py-16">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">
+          Our Project
+        </h2>
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          Our project aims to address the challenge of facilitating meaningful
+          connections among college students based on their academic interests
+          and potential collaboration opportunities.
+        </p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          We propose the development of a student community website that offers
+          a user-friendly platform for students to create profiles, highlighting
+          their names, academic degrees, and areas of interest.
+        </p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          Our platform will include interactive networking features such as chat
+          forums, discussion boards, and tools for fostering engagement and
+          facilitating organic connections among students with similar academic
+          interests.
+        </p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          By providing these features, our goal is to empower students to
+          collaborate, share knowledge, and explore opportunities for academic
+          growth and networking.
+        </p>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="bg-white py-16">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">
+          Our Platform Services
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Service 1 -->
+          <div class="p-6 bg-[#fefaff] rounded-lg shadow-lg">
+            <h3 class="text-xl font-bold mb-4 text-purple-600">
+              Project Collaboration
+            </h3>
+            <p class="text-gray-700">
+              We connect college developers to exciting project opportunities
+              where they can collaborate, learn, and build meaningful solutions
+              together.
+            </p>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="p-6 bg-[#fefaff] rounded-lg shadow-lg">
+            <h3 class="text-xl font-bold mb-4 text-purple-600">
+              Developer Networking
+            </h3>
+            <p class="text-gray-700">
+              Our platform helps students network with peers from various
+              academic backgrounds, fostering a community of innovators and
+              creators.
+            </p>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="p-6 bg-[#fefaff] rounded-lg shadow-lg">
+            <h3 class="text-xl font-bold mb-4 text-purple-600">
+              Project Management Tools
+            </h3>
+            <p class="text-gray-700">
+              We provide intuitive project management tools that streamline
+              collaboration, tracking progress, and ensuring smooth
+              communication between team members.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#8052a3] py-6 mt-4">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="text-center md:text-left mb-4 md:mb-0">
+            <a href="#" class="text-lg font-bold text-white">Privacy Policy</a>
+            <span class="mx-2 text-gray-300">|</span>
+            <a href="#" class="text-lg font-bold text-white"
+              >Terms of Service</a
+            >
+            <span class="mx-2 text-gray-300">|</span>
+            <a href="#" class="text-lg font-bold text-white">About Us</a>
+            <span class="mx-2 text-gray-300">|</span>
+            <a href="#" class="text-lg font-bold text-white">FAQ</a>
+          </div>
+          <div class="text-center mb-4 md:mb-0">
+            <a href="#" class="text-lg font-bold text-white">Contact Us</a>
+          </div>
+          <div class="flex space-x-4">
+            <ul role="list" class="flex space-x-4 p-0 m-0 list-none">
+              <li>
+                <a
+                  href="https://twitter.com"
+                  class="flex items-center space-x-2"
+                >
+                  <svg
+                    aria-hidden="true"
+                    focusable="false"
+                    width="24"
+                    height="24"
+                    fill="black"
+                  >
+                    <use href="#icon-twitter"></use>
+                  </svg>
+                  <span class="text-white">X (Twitter)</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://facebook.com"
+                  class="flex items-center space-x-2"
+                >
+                  <svg
+                    aria-hidden="true"
+                    focusable="false"
+                    width="24"
+                    height="24"
+                    fill="black"
+                  >
+                    <use href="#icon-facebook"></use>
+                  </svg>
+                  <span class="text-white">Facebook</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://linkedin.com"
+                  class="flex items-center space-x-2"
+                >
+                  <svg
+                    aria-hidden="true"
+                    focusable="false"
+                    width="24"
+                    height="24"
+                    fill="black"
+                  >
+                    <use href="#icon-linkedin"></use>
+                  </svg>
+                  <span class="text-white">LinkedIn</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

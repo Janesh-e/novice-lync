@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link rel="stylesheet" href="../Assets/css/style.css" />
+</head>
+
+<body>
+    <div class="flex h-screen">
+        <div class="sidebar flex flex-col items-center justify-between bg-[#fefaff] p-4 h-screen w-64">
+  <div class="text-center mb-4">
+    <span class="text-xl font-bold text-black">Novice Lync</span>
+  </div>
+  <img
+    src="../Assets/img/logo/logo.png"
+    alt="NOVICE LYNC logo"
+    class="mb-4"
+  />
+  <ul class="space-y-6 w-full">
+    <li class="flex items-center space-x-2">
+      <img
+        src="https://openui.fly.dev/openui/24x24.svg?text=🗂"
+        alt="Dashboard icon"
+        aria-hidden="true"
+      />
+      <a href="./dashboard.html"><span>Dashboard</span></a>
+    </li>
+    <li class="flex items-center space-x-2">
+      <img
+        src="https://openui.fly.dev/openui/24x24.svg?text=👤"
+        alt="User Profile icon"
+        aria-hidden="true"
+      />
+      <a href="./user.html"><span>User Profile</span></a>
+    </li>
+    <li class="flex items-center space-x-2">
+      <img
+        src="https://openui.fly.dev/openui/24x24.svg?text=🔗"
+        alt="Connect icon"
+        aria-hidden="true"
+      />
+      <span>Connect</span>
+    </li>
+    <li class="flex items-center space-x-2">
+      <img
+        src="https://openui.fly.dev/openui/24x24.svg?text=👥"
+        alt="Teams icon"
+        aria-hidden="true"
+      />
+      <span>Teams</span>
+    </li>
+    <li class="flex items-center space-x-2">
+      <img
+        src="https://openui.fly.dev/openui/24x24.svg?text=📈"
+        alt="Progress icon"
+        aria-hidden="true"
+      />
+      <a href="./progress.html"><span>Progress</span></a>
+    </li>
+    <li class="flex items-center space-x-2">
+      <img
+        src="https://openui.fly.dev/openui/24x24.svg?text=🎧"
+        alt="Support icon"
+        aria-hidden="true"
+      />
+      <span>Support</span>
+    </li>
+  </ul>
+  <a href="#"
+     class="mt-auto text-center w-28 inline-block px-6 py-2 text-white bg-red-600 border border-red-700 rounded-md hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-400 transition-colors text-sm">
+    Log out
+  </a>
+</div>
+
+
+        <div class="divider"></div>
+
+        <div class="main-content">
+            <h1 class="text-3xl font-bold">Hello User,</h1>
+            <h2 class="text-2xl font-semibold text-primary">
+                Manage Your Projects <span class="text-purple-600">Faster</span>
+            </h2>
+            <div class="grid grid-cols-2 gap-4 mt-8">
+                <div class="card">
+                    <h3 class="font-semibold mb-2">Calendar :</h3>
+                    <div class="grid grid-cols-7 gap-0.5 text-center">
+                    <div class="border calendar-cell hover:bg-gray-100">1</div>
+                    <div class="border calendar-cell hover:bg-gray-100">2</div>
+                    <div class="border calendar-cell hover:bg-gray-100">3</div>
+                    <div class="border calendar-cell hover:bg-gray-100">4</div>
+                    <div class="border calendar-cell hover:bg-gray-100">5</div>
+                    <div class="border calendar-cell hover:bg-gray-100">6</div>
+                    <div class="border calendar-cell hover:bg-gray-100">7</div>
+                    <div class="border calendar-cell hover:bg-gray-100">8</div>
+                    <div class="border calendar-cell hover:bg-gray-100">9</div>
+                    <div class="border calendar-cell hover:bg-gray-100">10</div>
+                    <div class="border calendar-cell hover:bg-gray-100">11</div>
+                    <div class="border calendar-cell hover:bg-gray-100">12</div>
+                    <div class="border calendar-cell hover:bg-gray-100">13</div>
+                    <div class="border calendar-cell hover:bg-gray-100">14</div>
+                    <div class="border calendar-cell hover:bg-gray-100">15</div>
+                    <div class="border calendar-cell hover:bg-gray-100">16</div>
+                    <div class="border calendar-cell hover:bg-gray-100">17</div>
+                    <div class="border calendar-cell hover:bg-gray-100">18</div>
+                    <div class="border calendar-cell hover:bg-gray-100">19</div>
+                    <div class="border calendar-cell hover:bg-gray-100">20</div>
+                    <div class="border calendar-cell hover:bg-gray-100">21</div>
+                    <div class="bg-purple-600 text-white rounded calendar-cell">22</div>
+                    <div class="border calendar-cell hover:bg-gray-100">23</div>
+                    <div class="border calendar-cell hover:bg-gray-100">24</div>
+                    <div class="border calendar-cell hover:bg-gray-100">25</div>
+                    <div class="border calendar-cell hover:bg-gray-100">26</div>
+                    <div class="border calendar-cell hover:bg-gray-100">27</div>
+                    <div class="border calendar-cell hover:bg-gray-100">28</div>
+                </div>
+
+                </div>
+
+                <div class="card">
+                    <h3 class="font-semibold mb-2">About The Project :</h3>
+                    <div class="h-24  rounded">
+                        <p> Welcome to Novice Lync, a platform designed to streamline project management and enhance
+                            team collaboration. Our goal is to provide tools and resources that help you efficiently
+                            manage tasks, track progress, and stay organized. Whether you're working on a solo project
+                            or coordinating with a team, Novice Lync has features to support your needs.
+                        </p>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-span-2 card">
+                    <h3 class="font-semibold mb-2">Notifications :</h3>
+                    <div class="notification-body">
+                        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                            <li>New task assigned: <strong>Complete project proposal</strong> due by next Monday.</li>
+                            <li>Your <strong>team meeting</strong> is scheduled for tomorrow at 3 PM.</li>
+                            <li><strong>Upcoming deadline</strong> for the client report is in 3 days. Please review and
+                                submit.</li>
+                            <li>Reminder: <strong>Weekly status update</strong> is due this Friday.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="font-semibold mb-2">Events :</h3>
+                    <div class=" rounded items-center">
+                        <ul class="list-disc pl-5 text-gray-700">
+                            <li><strong>September 10:</strong> Project Kickoff Meeting at 10 AM</li>
+                            <li><strong>September 15:</strong> Team Building Workshop at 2 PM</li>
+                            <li><strong>September 20:</strong> Mid-project Review at 11 AM</li>
+                            <li><strong>September 30:</strong> Client Presentation at 4 PM</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="font-semibold mb-2">Trends :</h3>
+                    <div class="x  rounded">
+                        <p class="text-sm text-gray-700">
+                            Stay ahead with the latest trends in project management and team collaboration. Here are
+                            some current trends:
+                        <ul class="list-disc pl-5 mt-2">
+                            <li>Increased adoption of remote collaboration tools.</li>
+                            <li>Focus on agile methodologies and iterative development.</li>
+                            <li>Integration of AI and automation in project management software.</li>
+                            <li>Emphasis on data-driven decision making and analytics.</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

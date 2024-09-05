@@ -1,0 +1,175 @@
+:root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.5rem;
+}
+
+.dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+}
+
+body {
+    background-color: #c7a4df;
+    font-family: "Inter", sans-serif;
+}
+
+.btn-primary {
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: hsl(var(--primary-foreground));
+    color: hsl(var(--primary));
+}
+
+.card {
+    background-color: hsl(var(--card));
+    color: hsl(var(--card-foreground));
+    border-radius: var(--radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #fbf2ff;
+    color: hsl(var(--secondary-foreground));
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-content {
+    width: 80%;
+    background-color: #c7a4df;
+    color: hsl(var(--accent-foreground));
+    padding: 2rem;
+}
+
+.notification-body {
+    background-color: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: var(--radius);
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+}
+
+.divider {
+    border-left: 2px solid white;
+    height: 100%;
+}
+
+.chart-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.progress-bar {
+    height: 20px;
+    border-radius: 0.5rem;
+    background-color: #e5e7eb;
+    position: relative;
+}
+
+.progress-bar .progress-fill {
+    height: 100%;
+    border-radius: inherit;
+    transition: width 0.3s ease-in-out;
+}
+
+.progress-bar .progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+}
+
+.todo-list {
+    list-style-type: none;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.todo-item input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.input-container {
+    flex: 1;
+    min-width: 0;
+}
+
+.input-field {
+    width: 100%;
+    max-width: 300px;
+}
+
+.edit-icon:hover img {
+    cursor: pointer;
+}
+
+.calendar-container {
+    max-width: 250px;
+    /* Adjust this value as needed */
+    margin: auto;
+    /* Center the calendar */
+}
+
+.calendar-cell {
+    padding: 0.5rem;
+    /* Reduce padding */
+    font-size: 0.75rem;
+    /* Reduce font size */
+}
+
+.icon-black {
+    fill: black;
+}
