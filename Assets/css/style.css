@@ -173,3 +173,21 @@ body {
 .icon-black {
     fill: black;
 }
+
+.sidebar {
+    position: -webkit-sticky;
+    /* For Safari */
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    /* Full viewport height */
+    overflow-y: auto;
+    /* Scrollable sidebar if needed */
+}
+
+.content {
+    flex: 1;
+    /* Takes up the remaining space */
+    overflow-y: auto;
+    /* Scrollable content area */
+}

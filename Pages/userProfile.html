@@ -34,7 +34,7 @@
               alt="User Profile icon"
               aria-hidden="true"
             />
-            <a href="./user.html"><span>User Profile</span></a>
+            <a href="./userProfile.html"><span>User Profile</span></a>
           </li>
           <li class="flex items-center space-x-2">
             <img
@@ -154,12 +154,12 @@
               >
               <input
                 type="text"
-                id="dob"
+                id="username"
                 value="sparky_mano"
                 class="w-full bg-transparent border border-gray-300 rounded-lg px-4 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"
                 disabled
               />
-              <div class="px-4 edit-icon" onclick="toggleEdit('dob')">
+              <div class="px-4 edit-icon" onclick="toggleEdit('username')">
                 <img
                   src="https://img.icons8.com/?size=100&id=8rqSU6umQzpk&format=png&color=000000"
                   alt="Edit Icon"
@@ -181,6 +181,52 @@
                 disabled
               />
               <div class="px-4 edit-icon" onclick="toggleEdit('dob')">
+                <img
+                  src="https://img.icons8.com/?size=100&id=8rqSU6umQzpk&format=png&color=000000"
+                  alt="Edit Icon"
+                  style="width: 16px"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Email and GitLab URL -->
+          <div class="flex space-x-4">
+            <div
+              class="flex-1 bg-white p-5 rounded-lg border border-gray-300 shadow-md flex items-center justify-between"
+            >
+              <span class="text-lg font-medium px-4 whitespace-nowrap"
+                >Email</span
+              >
+              <input
+                type="text"
+                id="email"
+                value="sparky_mano@gmail.com"
+                class="w-full bg-transparent border border-gray-300 rounded-lg px-4 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"
+                disabled
+              />
+              <div class="px-4 edit-icon" onclick="toggleEdit('email')">
+                <img
+                  src="https://img.icons8.com/?size=100&id=8rqSU6umQzpk&format=png&color=000000"
+                  alt="Edit Icon"
+                  style="width: 16px"
+                />
+              </div>
+            </div>
+            <div
+              class="flex-1 bg-white p-5 rounded-lg border border-gray-300 shadow-md flex items-center justify-between"
+            >
+              <span class="whitesp text-lg font-medium px-4 whitespace-nowrap"
+                >GitLab URL</span
+              >
+              <input
+                type="url"
+                id="gitlabUrl"
+                value="git.novicelync.com/sparky_mano"
+                class="w-full bg-transparent border border-gray-300 rounded-lg px-4 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"
+                disabled
+              />
+              <div class="px-4 edit-icon" onclick="toggleEdit('gitlabUrl')">
                 <img
                   src="https://img.icons8.com/?size=100&id=8rqSU6umQzpk&format=png&color=000000"
                   alt="Edit Icon"
@@ -288,7 +334,17 @@
         </div>
       </div>
     </div>
-
+    <script>
+      function toggleEdit(fieldId) {
+        var field = document.getElementById(fieldId);
+        if (field.disabled) {
+          field.disabled = false;
+          field.focus();
+        } else {
+          field.disabled = true;
+        }
+      }
+    </script>
     <script src="../Assets/scripts/main.js"></script>
   </body>
 </html>

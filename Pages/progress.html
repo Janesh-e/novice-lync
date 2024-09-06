@@ -24,7 +24,7 @@
         </li>
         <li class="flex items-center space-x-2">
           <img src="https://openui.fly.dev/openui/24x24.svg?text=👤" alt="User Profile icon" aria-hidden="true" />
-          <a href="./user.html"><span>User Profile</span></a>
+          <a href="./userProfile.html"><span>User Profile</span></a>
         </li>
         <li class="flex items-center space-x-2">
           <img src="https://openui.fly.dev/openui/24x24.svg?text=🔗" alt="Connect icon" aria-hidden="true" />
@@ -76,8 +76,17 @@
               </div>
             </div>
             <p class="text-sm text-gray-600 mt-2">Deadline: 2024-09-20</p>
+            <!-- Additional Status -->
+            <div>
+              <h2 class="text-xl font-semibold">Additional Status</h2>
+              <p class="text-sm text-gray-700 mt-2">
+                Backend architecture planned, awaiting review.
+              </p>
+            </div>
           </div>
         </div>
+
+
 
         <div class="w-3/4 bg-[var(--secondary)] p-8 mx-auto">
           <div class="flex space-x-8">
@@ -129,14 +138,16 @@
             </div>
 
             <!-- Team Members' Progress Section -->
-            <div class="w-1/2 bg-white p-6 rounded-lg shadow-md mx-auto px-4">
-              <h2 class="text-2xl font-bold mb-4">Team Members' Progress</h2>
-              <div class="bg-[var(--card)] p-4 rounded-lg">
+            <div class="w-1/2 bg-white p-6 rounded-lg shadow-md mx-auto px-4 flex flex-col items-center">
+              <h2 class="text-2xl font-bold mb-4 text-center">Team Members' Progress</h2>
+              <div class="bg-[var(--card)] p-4 rounded-lg w-full flex justify-center">
                 <div class="chart-container">
                   <canvas id="progressChart" width="300" height="300"></canvas>
                 </div>
               </div>
             </div>
+
+
           </div>
         </div>
       </div>
