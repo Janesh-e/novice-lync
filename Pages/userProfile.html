@@ -12,7 +12,9 @@
         class="sidebar flex flex-col items-center justify-between bg-[#fefaff] p-4 h-screen w-64"
       >
         <div class="text-center mb-4">
-          <span class="text-xl font-bold text-black">Novice Lync</span>
+          <a href="../index.html"
+            ><span class="text-xl font-bold text-black">Novice Lync</span></a
+          >
         </div>
         <img
           src="../Assets/img/logo/logo.png"
@@ -20,7 +22,7 @@
           class="mb-4"
         />
         <ul class="space-y-6 w-full">
-          <li class="flex items-center space-x-2">
+          <li id="dashboard" class="flex items-center space-x-2">
             <img
               src="https://openui.fly.dev/openui/24x24.svg?text=🗂"
               alt="Dashboard icon"
@@ -28,7 +30,7 @@
             />
             <a href="./dashboard.html"><span>Dashboard</span></a>
           </li>
-          <li class="flex items-center space-x-2">
+          <li id="userProfile" class="flex items-center space-x-2">
             <img
               src="https://openui.fly.dev/openui/24x24.svg?text=👤"
               alt="User Profile icon"
@@ -36,7 +38,7 @@
             />
             <a href="./userProfile.html"><span>User Profile</span></a>
           </li>
-          <li class="flex items-center space-x-2">
+          <li id="connect" class="flex items-center space-x-2">
             <img
               src="https://openui.fly.dev/openui/24x24.svg?text=🔗"
               alt="Connect icon"
@@ -44,7 +46,7 @@
             />
             <span>Connect</span>
           </li>
-          <li class="flex items-center space-x-2">
+          <li id="teams" class="flex items-center space-x-2">
             <img
               src="https://openui.fly.dev/openui/24x24.svg?text=👥"
               alt="Teams icon"
@@ -52,7 +54,7 @@
             />
             <span>Teams</span>
           </li>
-          <li class="flex items-center space-x-2">
+          <li id="progress" class="flex items-center space-x-2">
             <img
               src="https://openui.fly.dev/openui/24x24.svg?text=📈"
               alt="Progress icon"
@@ -60,7 +62,7 @@
             />
             <a href="./progress.html"><span>Progress</span></a>
           </li>
-          <li class="flex items-center space-x-2">
+          <li id="support" class="flex items-center space-x-2">
             <img
               src="https://openui.fly.dev/openui/24x24.svg?text=🎧"
               alt="Support icon"
@@ -111,7 +113,7 @@
                 class="w-full bg-transparent border border-gray-300 rounded-lg px-4 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"
                 disabled
               />
-              <div class="px-4 edit-icon" onclick="toggleEdit('firstName')">
+              <div class="px-8 edit-icon" onclick="toggleEdit('firstName')">
                 <img
                   src="https://img.icons8.com/?size=100&id=8rqSU6umQzpk&format=png&color=000000"
                   alt="Edit Icon"
@@ -134,7 +136,7 @@
                 class="w-full bg-transparent border border-gray-300 rounded-lg px-4 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"
                 disabled
               />
-              <div class="px-4 edit-icon" onclick="toggleEdit('lastName')">
+              <div class="px-8 edit-icon" onclick="toggleEdit('lastName')">
                 <img
                   src="https://img.icons8.com/?size=100&id=8rqSU6umQzpk&format=png&color=000000"
                   alt="Edit Icon"
@@ -159,7 +161,7 @@
                 class="w-full bg-transparent border border-gray-300 rounded-lg px-4 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"
                 disabled
               />
-              <div class="px-4 edit-icon" onclick="toggleEdit('username')">
+              <div class="px-8 edit-icon" onclick="toggleEdit('username')">
                 <img
                   src="https://img.icons8.com/?size=100&id=8rqSU6umQzpk&format=png&color=000000"
                   alt="Edit Icon"
@@ -180,7 +182,7 @@
                 class="w-full bg-transparent border border-gray-300 rounded-lg px-4 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"
                 disabled
               />
-              <div class="px-4 edit-icon" onclick="toggleEdit('dob')">
+              <div class="px-8 edit-icon" onclick="toggleEdit('dob')">
                 <img
                   src="https://img.icons8.com/?size=100&id=8rqSU6umQzpk&format=png&color=000000"
                   alt="Edit Icon"
@@ -205,7 +207,7 @@
                 class="w-full bg-transparent border border-gray-300 rounded-lg px-4 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"
                 disabled
               />
-              <div class="px-4 edit-icon" onclick="toggleEdit('email')">
+              <div class="px-8 edit-icon" onclick="toggleEdit('email')">
                 <img
                   src="https://img.icons8.com/?size=100&id=8rqSU6umQzpk&format=png&color=000000"
                   alt="Edit Icon"
@@ -226,7 +228,7 @@
                 class="w-full bg-transparent border border-gray-300 rounded-lg px-4 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"
                 disabled
               />
-              <div class="px-4 edit-icon" onclick="toggleEdit('gitlabUrl')">
+              <div class="px-8 edit-icon" onclick="toggleEdit('gitlabUrl')">
                 <img
                   src="https://img.icons8.com/?size=100&id=8rqSU6umQzpk&format=png&color=000000"
                   alt="Edit Icon"
@@ -245,10 +247,10 @@
             >
             <textarea
               id="bio"
-              class="bg-transparent border border-gray-300 rounded-lg px-4 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-[var(--primary)] resize-none h-16 w-full"
+              class="bg-transparent border border-gray-300 rounded-lg px-1 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-[var(--primary)] resize-none h-16 w-full"
               disabled
             >
-      cyber security enthusiast</textarea
+  Cyber Security Enthusiast</textarea
             >
             <div class="px-8 edit-icon" onclick="toggleEdit('bio')">
               <img
@@ -269,7 +271,7 @@
             <input
               type="text"
               id="majorDomain"
-              value="Web Developer"
+              value="Web Developement"
               class="bg-transparent border border-gray-300 rounded-lg px-4 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-[var(--primary)] w-full"
               disabled
             />
@@ -277,7 +279,7 @@
               <img
                 src="https://img.icons8.com/?size=100&id=8rqSU6umQzpk&format=png&color=000000"
                 alt="Edit Icon"
-                style="width: 16px; height: 16px"
+                style="width: 16px"
               />
             </div>
           </div>
@@ -290,7 +292,7 @@
             <input
               type="text"
               id="skills"
-              value="UI/UX Designer , Web Developer , VAPT Analyst"
+              value="UI/UX Designing (Figma) , Web Developement , VAPT Web Application Testing"
               class="bg-transparent border border-gray-300 rounded-lg px-4 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-[var(--primary)] w-full"
               disabled
             />

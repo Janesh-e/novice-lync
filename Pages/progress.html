@@ -7,38 +7,63 @@
   <link rel="stylesheet" href="../Assets/css/style.css">
   <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+  <style>
+      .chart-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      padding-top: 100%; /* 1:1 Aspect Ratio */
+    }
 
+    #progressChart {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .todo-container {
+      max-height: 500px; /* Adjust as needed */
+      overflow-y: auto;
+    }
+
+    .chart-wrapper {
+      overflow-y: auto;
+    }
+    
+  </style>
 </head>
 
 <body>
   <div class="flex min-h-screen bg-[var(--background)]">
     <div class="sidebar flex flex-col items-center justify-between bg-[#fefaff] p-4 h-screen w-64">
       <div class="text-center mb-4">
-        <span class="text-xl font-bold text-black">Novice Lync</span>
+        <a href="../index.html"><span class="text-xl font-bold text-black">Novice Lync</span></a>
       </div>
       <img src="../Assets/img/logo/logo.png" alt="NOVICE LYNC logo" class="mb-4" />
       <ul class="space-y-6 w-full">
-        <li class="flex items-center space-x-2">
+        <li id="dashboard" class="flex items-center space-x-2">
           <img src="https://openui.fly.dev/openui/24x24.svg?text=🗂" alt="Dashboard icon" aria-hidden="true" />
           <a href="./dashboard.html"><span>Dashboard</span></a>
         </li>
-        <li class="flex items-center space-x-2">
+        <li id="userProfile" class="flex items-center space-x-2">
           <img src="https://openui.fly.dev/openui/24x24.svg?text=👤" alt="User Profile icon" aria-hidden="true" />
           <a href="./userProfile.html"><span>User Profile</span></a>
         </li>
-        <li class="flex items-center space-x-2">
+        <li id="connect" class="flex items-center space-x-2">
           <img src="https://openui.fly.dev/openui/24x24.svg?text=🔗" alt="Connect icon" aria-hidden="true" />
           <span>Connect</span>
         </li>
-        <li class="flex items-center space-x-2">
+        <li id="teams" class="flex items-center space-x-2">
           <img src="https://openui.fly.dev/openui/24x24.svg?text=👥" alt="Teams icon" aria-hidden="true" />
           <span>Teams</span>
         </li>
-        <li class="flex items-center space-x-2">
+        <li id="progress" class="flex items-center space-x-2">
           <img src="https://openui.fly.dev/openui/24x24.svg?text=📈" alt="Progress icon" aria-hidden="true" />
           <a href="./progress.html"><span>Progress</span></a>
         </li>
-        <li class="flex items-center space-x-2">
+        <li id="support" class="flex items-center space-x-2">
           <img src="https://openui.fly.dev/openui/24x24.svg?text=🎧" alt="Support icon" aria-hidden="true" />
           <span>Support</span>
         </li>
@@ -48,7 +73,6 @@
         Log out
       </a>
     </div>
-
 
     <div class="w-3/4 bg-[var(--secondary)] p-8 mx-auto">
       <div class="space-y-8">
@@ -86,12 +110,10 @@
           </div>
         </div>
 
-
-
         <div class="w-3/4 bg-[var(--secondary)] p-8 mx-auto">
           <div class="flex space-x-8">
             <!-- Today's Tasks Section -->
-            <div class="w-1/2 bg-white p-6 rounded-lg shadow-md">
+            <div class="w-1/2 bg-white p-6 rounded-lg shadow-md todo-container">
               <h2 class="text-2xl font-bold mb-4">Today's Tasks</h2>
               <ul class="space-y-2">
                 <li class="flex items-center space-x-2">
@@ -113,6 +135,7 @@
                 <li class="flex items-center space-x-2">
                   <input type="checkbox" id="task5" class="h-5 w-5" />
                   <label for="task5" class="text-gray-700">Test the new feature on staging environment</label>
+                </li>
                 <li class="flex items-center space-x-2">
                   <input type="checkbox" id="task6" class="h-5 w-5" />
                   <label for="task6" class="text-gray-700">Refactor the payment processing code</label>
@@ -134,25 +157,22 @@
                   <label for="task10" class="text-gray-700">Deploy the app to the production server</label>
                 </li>
               </ul>
-
             </div>
 
-            <!-- Team Members' Progress Section -->
-            <div class="w-1/2 bg-white p-6 rounded-lg shadow-md mx-auto px-4 flex flex-col items-center">
+             <!-- Team Members' Progress Section -->
+            <div class="w-1/2 bg-white p-6 rounded-lg shadow-md mx-auto flex flex-col items-center">
               <h2 class="text-2xl font-bold mb-4 text-center">Team Members' Progress</h2>
-              <div class="bg-[var(--card)] p-4 rounded-lg w-full flex justify-center">
+              <div class="chart-wrapper w-full p-4 bg-[var(--card)] rounded-lg flex justify-center">
                 <div class="chart-container">
                   <canvas id="progressChart" width="300" height="300"></canvas>
                 </div>
               </div>
             </div>
-
-
           </div>
         </div>
       </div>
     </div>
     <script src="../Assets/scripts/progressChart.js"></script>
-</body>
+  </body>
 
 </html>

@@ -6,37 +6,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
   <link rel="stylesheet" href="../Assets/css/style.css" />
+  <style>
+    .main-content {
+      overflow: auto;
+      height: calc(100vh - 2rem);
+      /* Adjust according to your layout */
+    }
+
+    .card {
+      overflow: auto;
+      max-height: 300px;
+      /* Adjust based on your design */
+      border: 1px solid #e0e0e0;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      background-color: #fff;
+    }
+
+    .notification-body,
+    .rounded {
+      max-height: 200px;
+      /* Adjust based on your design */
+      overflow-y: auto;
+    }
+  </style>
 </head>
 
 <body>
-  <div class="flex h-screen">
+  <div class="flex min-h-screen bg-[var(--background)]">
     <div class="sidebar flex flex-col items-center justify-between bg-[#fefaff] p-4 h-screen w-64">
       <div class="text-center mb-4">
-        <span class="text-xl font-bold text-black">Novice Lync</span>
+        <a href="../index.html"><span class="text-xl font-bold text-black">Novice Lync</span></a>
       </div>
       <img src="../Assets/img/logo/logo.png" alt="NOVICE LYNC logo" class="mb-4" />
       <ul class="space-y-6 w-full">
-        <li class="flex items-center space-x-2">
+        <li id="dashboard" class="flex items-center space-x-2">
           <img src="https://openui.fly.dev/openui/24x24.svg?text=🗂" alt="Dashboard icon" aria-hidden="true" />
           <a href="./dashboard.html"><span>Dashboard</span></a>
         </li>
-        <li class="flex items-center space-x-2">
+        <li id="userProfile" class="flex items-center space-x-2">
           <img src="https://openui.fly.dev/openui/24x24.svg?text=👤" alt="User Profile icon" aria-hidden="true" />
           <a href="./userProfile.html"><span>User Profile</span></a>
         </li>
-        <li class="flex items-center space-x-2">
+        <li id="connect" class="flex items-center space-x-2">
           <img src="https://openui.fly.dev/openui/24x24.svg?text=🔗" alt="Connect icon" aria-hidden="true" />
           <span>Connect</span>
         </li>
-        <li class="flex items-center space-x-2">
+        <li id="teams" class="flex items-center space-x-2">
           <img src="https://openui.fly.dev/openui/24x24.svg?text=👥" alt="Teams icon" aria-hidden="true" />
           <span>Teams</span>
         </li>
-        <li class="flex items-center space-x-2">
+        <li id="progress" class="flex items-center space-x-2">
           <img src="https://openui.fly.dev/openui/24x24.svg?text=📈" alt="Progress icon" aria-hidden="true" />
           <a href="./progress.html"><span>Progress</span></a>
         </li>
-        <li class="flex items-center space-x-2">
+        <li id="support" class="flex items-center space-x-2">
           <img src="https://openui.fly.dev/openui/24x24.svg?text=🎧" alt="Support icon" aria-hidden="true" />
           <span>Support</span>
         </li>
@@ -47,13 +71,11 @@
       </a>
     </div>
 
-
     <div class="divider"></div>
-
-    <div class="main-content">
+    <div class="main-content flex-1 p-4">
       <h1 class="text-3xl font-bold">Hello User,</h1>
       <h2 class="text-2xl font-semibold text-primary">
-        Manage Your Projects <span class="text-purple-600">Faster</span>
+        Manage Your Projects <span class="text-purple-800">Faster</span>
       </h2>
       <div class="grid grid-cols-2 gap-4 mt-8">
         <div class="card">
@@ -88,64 +110,87 @@
             <div class="border calendar-cell hover:bg-gray-100">27</div>
             <div class="border calendar-cell hover:bg-gray-100">28</div>
           </div>
-
         </div>
 
         <div class="card">
           <h3 class="font-semibold mb-2">About The Project :</h3>
-          <div class="h-24  rounded">
-            <p> Welcome to Novice Lync, a platform designed to streamline project management and enhance
-              team collaboration. Our goal is to provide tools and resources that help you efficiently
-              manage tasks, track progress, and stay organized. Whether you're working on a solo project
-              or coordinating with a team, Novice Lync has features to support your needs.
-            </p>
-            </p>
-          </div>
+          <p>
+            Welcome to Novice Lync, a platform designed to streamline
+            project management and enhance team collaboration. Our goal is
+            to provide tools and resources that help you efficiently manage
+            tasks, track progress, and stay organized. Whether you're
+            working on a solo project or coordinating with a team, Novice
+            Lync has features to support your needs.
+          </p>
+
         </div>
 
         <div class="col-span-2 card">
           <h3 class="font-semibold mb-2">Notifications :</h3>
           <div class="notification-body">
             <ul class="list-disc pl-5 space-y-2 text-gray-700">
-              <li>New task assigned: <strong>Complete project proposal</strong> due by next Monday.</li>
-              <li>Your <strong>team meeting</strong> is scheduled for tomorrow at 3 PM.</li>
-              <li><strong>Upcoming deadline</strong> for the client report is in 3 days. Please review and
-                submit.</li>
-              <li>Reminder: <strong>Weekly status update</strong> is due this Friday.</li>
+              <li>
+                New task assigned:
+                <strong>Complete project proposal</strong> due by next Monday.
+              </li>
+              <li>
+                Your <strong>team meeting</strong> is scheduled for tomorrow
+                at 3 PM.
+              </li>
+              <li>
+                <strong>Upcoming deadline</strong> for the client report is in
+                3 days. Please review and submit.
+              </li>
+              <li>
+                Reminder: <strong>Weekly status update</strong> is due this
+                Friday.
+              </li>
             </ul>
           </div>
         </div>
 
         <div class="card">
           <h3 class="font-semibold mb-2">Events :</h3>
-          <div class=" rounded items-center">
+          <div class="rounded items-center">
             <ul class="list-disc pl-5 text-gray-700">
-              <li><strong>September 10:</strong> Project Kickoff Meeting at 10 AM</li>
-              <li><strong>September 15:</strong> Team Building Workshop at 2 PM</li>
-              <li><strong>September 20:</strong> Mid-project Review at 11 AM</li>
-              <li><strong>September 30:</strong> Client Presentation at 4 PM</li>
+              <li>
+                <strong>September 10:</strong> Project Kickoff Meeting at 10
+                AM
+              </li>
+              <li>
+                <strong>September 15:</strong> Team Building Workshop at 2 PM
+              </li>
+              <li>
+                <strong>September 20:</strong> Mid-project Review at 11 AM
+              </li>
+              <li>
+                <strong>September 30:</strong> Client Presentation at 4 PM
+              </li>
             </ul>
           </div>
         </div>
 
         <div class="card">
           <h3 class="font-semibold mb-2">Trends :</h3>
-          <div class="x  rounded">
+          <div class="rounded">
             <p class="text-sm text-gray-700">
-              Stay ahead with the latest trends in project management and team collaboration. Here are
-              some current trends:
-            <ul class="list-disc pl-5 mt-2">
+              Stay ahead with the latest trends in project management and team
+              collaboration. Here are some current trends:
+            </p>
+            <ul class="list-disc pl-5 mt-2 text-gray-700">
               <li>Increased adoption of remote collaboration tools.</li>
               <li>Focus on agile methodologies and iterative development.</li>
-              <li>Integration of AI and automation in project management software.</li>
+              <li>
+                Integration of AI and automation in project management
+                software.
+              </li>
               <li>Emphasis on data-driven decision making and analytics.</li>
             </ul>
-            </p>
           </div>
         </div>
       </div>
     </div>
-  </div>
+
 </body>
 
 </html>
