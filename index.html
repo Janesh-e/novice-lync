@@ -4,9 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-    <link rel="stylesheet" href="../Assets/css/style.css" />
-    <title>Home - Novice Lync</title>
+    <link rel="stylesheet" href="./Assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <title>Sign In</title>
   </head>
+
   <body class="flex flex-col min-h-screen bg-white">
     <!-- Navbar -->
     <nav class="bg-[#fbf2ff] shadow-md py-4">
@@ -19,125 +24,74 @@
           />
           <span class="text-xl font-bold text-black">Novice Lync</span>
         </div>
-        <div class="space-x-4">
-          <a
-            href="./Pages/login.html"
-            class="text-black font-semibold hover:text-purple-600"
-            >Login</a
-          >
-          <a
-            href="./Pages/signup.html"
-            class="bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-500"
-            >Sign Up</a
-          >
-        </div>
       </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="bg-white py-16">
-      <div class="container mx-auto px-4 text-center">
-        <h1 class="text-4xl font-bold text-gray-900 mb-6">
-          Welcome to Novice Lync
-        </h1>
-        <p class="text-lg text-gray-600 mb-8">
-          Connect, collaborate, and innovate with fellow students to bring your
-          academic and project ideas to life.
-        </p>
-
-        <a
-          href="#Service"
-          class="bg-purple-600 text-white px-6 py-3 rounded-md hover:bg-purple-500"
-          >Explore Our Platform</a
-        >
-      </div>
-    </section>
-
-    <!-- Project Overview Section -->
-    <section class="bg-[#fefaff] py-16">
+    <!-- Main Content -->
+    <main class="flex-grow flex items-center justify-center">
       <div
-        class="container mx-auto px-12 py-16 text-center shadow-lg rounded-lg text-justify"
+        class="w-full max-w-md bg-white p-8 rounded-lg shadow-lg bg-[#fefaff]"
       >
-        <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">
-          Our Project
-        </h2>
-        <p
-          class="text-center text-lg text-gray-700 leading-relaxed mb-6 text-justify mx-auto"
-        >
-          Our project aims to address the challenge of facilitating meaningful
-          connections among college students based on their academic interests
-          and potential collaboration opportunities.
-        </p>
-        <p
-          class="text-center text-lg text-gray-700 leading-relaxed mb-6 text-justify mx-auto"
-        >
-          We propose the development of a student community website that offers
-          a user-friendly platform for students to create profiles, highlighting
-          their names, academic degrees, and areas of interest.
-        </p>
-        <p
-          class="text-lg text-gray-700 leading-relaxed mb-6 text-justify mx-auto"
-        >
-          Our platform will include interactive networking features such as chat
-          forums, discussion boards, and tools for fostering engagement and
-          facilitating organic connections among students with similar academic
-          interests.
-        </p>
-        <p
-          class="text-lg text-gray-700 leading-relaxed mb-6 text-justify mx-auto"
-        >
-          By providing these features, our goal is to empower students to
-          collaborate, share knowledge, and explore opportunities for academic
-          growth and networking.
-        </p>
-      </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="bg-white py-16" id="Service">
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">
-          Our Platform Services
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- Service 1 -->
-          <div class="p-6 bg-[#fefaff] rounded-lg shadow-lg">
-            <h3 class="text-xl font-bold mb-4 text-purple-600">
-              Project Collaboration
-            </h3>
-            <p class="text-gray-700">
-              We connect college developers to exciting project opportunities
-              where they can collaborate, learn, and build meaningful solutions
-              together.
-            </p>
+        <h2 class="text-3xl font-bold text-center mb-6 text-gray-900">Login</h2>
+        <form id="login-form" class="space-y-4">
+          <div>
+            <label
+              for="username"
+              class="block text-lg font-medium text-gray-700"
+              >Username</label
+            >
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Enter your username"
+              class="w-full bg-white-50 border border-gray-300 rounded-lg px-4 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500"
+              required
+            />
           </div>
-
-          <!-- Service 2 -->
-          <div class="p-6 bg-[#fefaff] rounded-lg shadow-lg">
-            <h3 class="text-xl font-bold mb-4 text-purple-600">
-              Developer Networking
-            </h3>
-            <p class="text-gray-700">
-              Our platform helps students network with peers from various
-              academic backgrounds, fostering a community of innovators and
-              creators.
-            </p>
+          <div class="relative">
+            <label
+              for="password"
+              class="block text-lg font-medium text-gray-700"
+              >Password</label
+            >
+            <div class="password-box">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+              />
+              /> />
+              <button type="button" id="toggle-password">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
           </div>
-
-          <!-- Service 3 -->
-          <div class="p-6 bg-[#fefaff] rounded-lg shadow-lg">
-            <h3 class="text-xl font-bold mb-4 text-purple-600">
-              Project Management Tools
-            </h3>
-            <p class="text-gray-700">
-              We provide intuitive project management tools that streamline
-              collaboration, tracking progress, and ensuring smooth
-              communication between team members.
-            </p>
+          <div class="flex items-center justify-between py-6">
+            <a
+              href="./resetpassword.html"
+              class="text-sm text-purple-600 hover:underline"
+              >Forgot your password?</a
+            >
+            <button
+              type="submit"
+              class="inline-block px-6 py-2 text-white bg-purple-600 border border-purple-700 rounded-md hover:bg-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-400 transition-colors text-sm"
+            >
+              Login
+            </button>
           </div>
+        </form>
+        <div class="text-center mt-4">
+          <p class="text-sm text-gray-600">
+            Don't have an account?
+            <a href="signup.html" class="text-purple-600 hover:underline"
+              >Sign up</a
+            >
+          </p>
         </div>
       </div>
-    </section>
+    </main>
 
     <!-- Footer -->
     <footer class="bg-[#8052a3] py-6 mt-4">
@@ -169,6 +123,7 @@
                     focusable="false"
                     width="24"
                     height="24"
+                    class="icon icon-twitter icon-black"
                     fill="black"
                   >
                     <use href="#icon-twitter"></use>
@@ -186,6 +141,7 @@
                     focusable="false"
                     width="24"
                     height="24"
+                    class="icon icon-facebook icon-black"
                     fill="black"
                   >
                     <use href="#icon-facebook"></use>
@@ -203,6 +159,7 @@
                     focusable="false"
                     width="24"
                     height="24"
+                    class="icon icon-linkedin icon-black"
                     fill="black"
                   >
                     <use href="#icon-linkedin"></use>
@@ -215,5 +172,33 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      document
+        .getElementById("login-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent the default form submission
+          // Redirect to dashboard.html
+          window.location.href = "dashboard.html";
+        });
+
+      document
+        .getElementById("toggle-password")
+        .addEventListener("click", function () {
+          const passwordField = document.getElementById("password");
+          const passwordFieldType = passwordField.getAttribute("type");
+          const icon = this.querySelector("i");
+
+          if (passwordFieldType === "password") {
+            passwordField.setAttribute("type", "text");
+            icon.classList.remove("fa-eye");
+            icon.classList.add("fa-eye-slash");
+          } else {
+            passwordField.setAttribute("type", "password");
+            icon.classList.remove("fa-eye-slash");
+            icon.classList.add("fa-eye");
+          }
+        });
+    </script>
   </body>
 </html>

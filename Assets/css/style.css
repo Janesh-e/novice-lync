@@ -191,3 +191,14 @@ body {
     overflow-y: auto;
     /* Scrollable content area */
 }
+
+
+.input-field {
+    flex: 1;
+}
+
+.password-box button {
+    position: absolute;
+    right: 0.6rem;
+    top: 2.4rem;
+}
